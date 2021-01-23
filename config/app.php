@@ -181,7 +181,9 @@ return [
 		/**
 		 * Warehose Service Provider
 		 */
-		App\Packages\Warehouse\Home\Providers\HomeServiceProvider::class,
+		Cutbray\Example\Providers\ExampleServiceProvider::class,
+		Warehouse\Home\Providers\HomeServiceProvider::class,
+
 
 	],
 

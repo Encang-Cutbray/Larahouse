@@ -1,9 +1,10 @@
 <?php
-namespace App\Packages\Warehouse\Home\Providers;
+
+namespace Cutbray\Example\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-class HomeServiceProvider extends ServiceProvider
+class ExampleServiceProvider extends ServiceProvider
 {
 	public function boot()
 	{
@@ -12,11 +13,11 @@ class HomeServiceProvider extends ServiceProvider
 
 	public function register()
 	{
-
 	}
 
-	protected function pathRoute() {
+	protected function pathRoute()
+	{
 		$dir = __DIR__;
-		return "{$dir}/../Http/home.route.php";
+		return "{$dir}/../Http/example.route.php";
 	}
 }

@@ -1,0 +1,26 @@
+{
+    "name": "encang-rohidun/home",
+    "description": "Warehouse Home",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "encang cutbray",
+            "email": "cabe2cabean214@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"Warehouse\\Home\\": "src/"
+		}
+	},
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Warehouse\\Home\\Providers\\HomeServiceProvider"
+			]
+		}
+	}
+}

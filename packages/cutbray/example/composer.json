@@ -1,0 +1,26 @@
+{
+	"name": "encang-rohidun/example",
+	"description": "Example Package",
+	"type": "project",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "encang cutbray",
+			"email": "cabe2cabean214@gmail.com"
+		}
+	],
+	"minimum-stability": "dev",
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"Cutbray\\Example\\": "src/"
+		}
+	},
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Cutbray\\Example\\Providers\\ExampleServiceProvider"
+			]
+		}
+	}
+}
