@@ -13,8 +13,9 @@
 							<div class="ui left icon input">
 								<i class="user icon"></i>
 								<input
+									v-model="registrationForm.fullname"
 									type="text"
-									name="fullname"
+									:disabled="isLoading"
 									placeholder="Fullname"
 								/>
 							</div>
@@ -24,7 +25,8 @@
 								<i class="envelope icon"></i>
 								<input
 									type="text"
-									name="email"
+									:disabled="isLoading"
+									v-model="registrationForm.email"
 									placeholder="E-mail address"
 								/>
 							</div>
@@ -34,12 +36,17 @@
 								<i class="lock icon"></i>
 								<input
 									type="password"
-									name="password"
+									:disabled="isLoading"
+									v-model="registrationForm.password"
 									placeholder="Password"
 								/>
 							</div>
 						</div>
-						<div class="ui fluid large red submit button">
+						<div
+							class="ui fluid large red submit button"
+							:class="{ disabled: isLoading }"
+							@click="handleRegistration"
+						>
 							Registration
 						</div>
 					</div>
@@ -47,7 +54,10 @@
 					<div class="ui error message"></div>
 				</form>
 
-				<div class="ui message">Login? <inertia-link :href="login" :class="orange">Login</inertia-link></div>
+				<div class="ui message" v-if="!isLoading">
+					Login?
+					<inertia-link :href="login">Login</inertia-link>
+				</div>
 			</div>
 		</div>
 	</auth-layout>
@@ -65,11 +75,25 @@ export default {
 	},
 	data() {
 		return {
-			loginForm: {
-				email: null,
-				password: null
+			isLoading: false,
+			registrationForm: {
+				fullname: 'Encang Cutbray',
+				email: 'encang@cutbray.com',
+				password: 'secret'
 			}
 		};
+	},
+	methods: {
+		handleRegistration() {
+			this.isLoading = !this.isLoading;
+			axios.post("/registration", this.registrationForm).then(res => {
+				console.log(res.data);
+				this.isLoading = !this.isLoading;
+			}).catch(error => {
+				this.isLoading = !this.isLoading
+				console.log(error.response);
+			});
+		}
 	}
 };
 </script>
