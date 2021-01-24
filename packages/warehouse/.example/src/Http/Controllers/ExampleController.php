@@ -1,25 +1,18 @@
 <?php
 
-namespace Warehouse\Home\Http\Controllers;
+namespace Warehouse\Example\Http\Controllers;
 
 use Inertia\Inertia;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\URL;
 use Warehouse\Baseclass\Controller;
 
-class HomeController extends Controller
+class ExampleController extends Controller
 {
 	public function index()
 	{
+		return ['sample module'];
 		return Inertia::render('Home/Home', [
-			'example' => URL::route('example'),
-			'home' => URL::route('home'),
-		]);
-	}
-
-	public function example()
-	{
-		return Inertia::render('Home/Example2', [
 			'example' => URL::route('example'),
 			'home' => URL::route('home'),
 		]);

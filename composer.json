@@ -42,7 +42,9 @@
 			"App\\": "app/",
 			"Database\\Factories\\": "database/factories/",
 			"Database\\Seeders\\": "database/seeders/",
-			"Cutbray\\Example\\": "packages/cutbray/example/src/",
+			"Warehouse\\Baseclass\\": "packages/warehouse/.base/src/",
+			"Warehouse\\Example\\": "packages/warehouse/.example/src/",
+			"Warehouse\\Auth\\": "packages/warehouse/auth/src/",
 			"Warehouse\\Home\\": "packages/warehouse/home/src/"
 		}
 	},

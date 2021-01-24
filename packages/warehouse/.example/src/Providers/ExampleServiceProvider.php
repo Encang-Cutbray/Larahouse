@@ -1,6 +1,6 @@
 <?php
 
-namespace Cutbray\Example\Providers;
+namespace Warehouse\Example\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

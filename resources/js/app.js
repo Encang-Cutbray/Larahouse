@@ -1,5 +1,4 @@
 require("./bootstrap");
-
 // Import modules...
 import Vue from "vue";
 import {

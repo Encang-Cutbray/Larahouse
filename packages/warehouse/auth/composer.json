@@ -1,0 +1,26 @@
+{
+	"name": "encang-rohidun/auth",
+	"description": "Auth warehouse",
+	"type": "project",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "encang cutbray",
+			"email": "cabe2cabean214@gmail.com"
+		}
+	],
+	"minimum-stability": "dev",
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"Warehouse\\Auth\\": "src/"
+		}
+	},
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Warehouse\\Auth\\Providers\\AuthServiceProvider"
+			]
+		}
+	}
+}

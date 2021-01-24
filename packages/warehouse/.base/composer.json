@@ -1,6 +1,6 @@
 {
-	"name": "encang-rohidun/example",
-	"description": "Example Package",
+	"name": "ecange-rohiudun/base",
+	"description": "Base Class Module",
 	"type": "project",
 	"license": "MIT",
 	"authors": [
@@ -13,14 +13,12 @@
 	"require": {},
 	"autoload": {
 		"psr-4": {
-			"Cutbray\\Example\\": "src/"
+			"Warehouse\\Baseclass\\": "src/"
 		}
 	},
 	"extra": {
 		"laravel": {
-			"providers": [
-				"Cutbray\\Example\\Providers\\ExampleServiceProvider"
-			]
+			"providers": []
 		}
 	}
 }
