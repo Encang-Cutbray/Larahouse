@@ -9,7 +9,7 @@ class WarehouseException extends Exception
 	protected $statusCode = 500;
 	protected $details;
 
-	public function __construct($message, $details = [])
+	public function __construct(String $message, array $details = [])
 	{
 		parent::__construct($message);
 		$this->details = $details;
@@ -22,7 +22,7 @@ class WarehouseException extends Exception
 				'error' 	=> true,
 				'status' 	=> $this->statusCode,
 				'message' 	=> $this->message,
-				'details' 	=> $this->details,
+				'details' 	=> count($this->details) <= 0 ? null : collect($this->details)->all() ,
 			], $this->statusCode);
 		}
 	}

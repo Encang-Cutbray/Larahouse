@@ -6,9 +6,10 @@ use Inertia\Inertia;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\URL;
 use Warehouse\Baseclass\Controller;
+use Illuminate\Support\Facades\Redis;
+use Warehouse\Auth\Services\AuthService;
 use Warehouse\Auth\Http\Request\LoginRequest;
 use Warehouse\Auth\Http\Request\RegistrationRequest;
-use Warehouse\Auth\Services\AuthService;
 
 class AuthController extends Controller
 {
@@ -42,7 +43,7 @@ class AuthController extends Controller
 	public function postRegistration(RegistrationRequest $request)
 	{
 		$valid = $request->validated();
-		$this->authService->registrationNewUser($valid);
-		return response()->json($valid, 200);
+		$user = $this->authService->registrationNewUser($valid);
+		return response()->json($user, 200);
 	}
 }

@@ -13,9 +13,9 @@
 							<div class="ui left icon input">
 								<i class="user icon"></i>
 								<input
-									v-model="registrationForm.fullname"
 									type="text"
 									:disabled="isLoading"
+									v-model="registrationForm.name"
 									placeholder="Fullname"
 								/>
 							</div>
@@ -77,22 +77,25 @@ export default {
 		return {
 			isLoading: false,
 			registrationForm: {
-				fullname: 'Encang Cutbray',
-				email: 'encang@cutbray.com',
-				password: 'secret'
+				name: "Encang Cutbray",
+				email: "encang@cutbray.com",
+				password: "secret"
 			}
 		};
 	},
 	methods: {
 		handleRegistration() {
 			this.isLoading = !this.isLoading;
-			axios.post("/registration", this.registrationForm).then(res => {
-				console.log(res.data);
-				this.isLoading = !this.isLoading;
-			}).catch(error => {
-				this.isLoading = !this.isLoading
-				console.log(error.response);
-			});
+			axios
+				.post("/registration", this.registrationForm)
+				.then(res => {
+					console.log(res.data);
+					this.isLoading = !this.isLoading;
+				})
+				.catch(error => {
+					this.isLoading = !this.isLoading;
+					console.log(error.response);
+				});
 		}
 	}
 };

@@ -20,9 +20,9 @@ class RegistrationRequest extends FormRequest
 	public function rules()
 	{
 		return [
-			'fullname' => 'required',
-			'email'	=> 'required|email',
-			'password' => 'required|min:5'
+			'name' 		=> 'required',
+			'email'		=> 'required|email|unique:users,email',
+			'password' 	=> 'required|min:5'
 		];
 	}
 }
