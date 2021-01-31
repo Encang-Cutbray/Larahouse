@@ -16,12 +16,4 @@ Route::group(['middleware' => ['web']], function () {
 		$user = User::first();
 		return new RegistrationMail($user);
 	});
-
-	Route::get('example-job/{jobs}', function ($jobs) {
-		$user = User::first();
-		for ($i = 0; $i < $jobs; $i++) {
-			CheckUserVerificationJob::dispatch($user);
-		}
-		return ['done'];
-	});
 });

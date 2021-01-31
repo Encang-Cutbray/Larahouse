@@ -31,6 +31,7 @@
         "@inertiajs/inertia": "^0.8.2",
         "@inertiajs/inertia-vue": "^0.5.4",
         "@inertiajs/progress": "^0.2.4",
-        "path": "^0.12.7"
+        "laravel-echo": "^1.10.0",
+        "pusher-js": "^7.0.3"
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Warehouse\Auth\Jobs;
+namespace Warehouse\Example\Jobs;
 
 use App\Models\User;
 use Illuminate\Bus\Queueable;
@@ -15,6 +15,7 @@ class CheckUserVerificationJob implements ShouldQueue
 	use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
 	public $user;
+
 	public function __construct(User $user)
 	{
 		$this->user = $user;
