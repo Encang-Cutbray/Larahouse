@@ -26,6 +26,6 @@ class ExampleJobQueueController extends Controller
 	{
 		// event(new NewMessage('welocme'));
 		return Inertia::render('Examples/Broadcasting');
-		return ['exampleWebsockets'];
+		// return ['exampleWebsockets'];
 	}
 }

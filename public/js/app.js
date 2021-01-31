@@ -4720,11 +4720,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   mounted: function mounted() {
+    console.log(this.getNotification());
     this.getNotification();
   },
   methods: {
     getNotification: function getNotification() {
-      Echo.channel("home").listen("NewMessage", function (e) {
+      Echo.channel("home").listen(".NewMessage", function (e) {
         console.log(e);
       });
     }
@@ -5940,12 +5941,12 @@ if (token) {
 window.Pusher = __webpack_require__(/*! pusher-js */ "./node_modules/pusher-js/dist/web/pusher.js");
 window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__.default({
   broadcaster: "pusher",
-  key: "encangCutbray",
+  key: "websockets",
   // cluster: process.env.MIX_PUSHER_APP_CLUSTER,
   // forceTLS: true
-  namespace: 'Warehouse.Example.Events',
-  wsHost: window.location.hostname,
-  wsPort: 6001,
+  namespace: "Warehouse.Example.Events",
+  wsHost: "websockets.ps",
+  wsPort: 6060,
   forceTLS: false,
   disableStats: true
 });

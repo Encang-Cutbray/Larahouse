@@ -39,9 +39,9 @@ window.Echo = new Echo({
 	key: process.env.MIX_PUSHER_APP_KEY,
 	// cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 	// forceTLS: true
-	namespace: 'Warehouse.Example.Events',
-	wsHost: window.location.hostname,
-	wsPort: 6001,
+	namespace: "Warehouse.Example.Events",
+	wsHost: "websockets.ps",
+	wsPort: 6060,
 	forceTLS: false,
 	disableStats: true
 });

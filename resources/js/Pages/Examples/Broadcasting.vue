@@ -5,11 +5,12 @@
 <script>
 export default {
 	mounted() {
+		console.log(this.getNotification());
 		this.getNotification();
 	},
 	methods: {
 		getNotification() {
-			Echo.channel("home").listen("NewMessage", e => {
+			Echo.channel("home").listen(".NewMessage", e => {
 				console.log(e);
 			});
 		}
