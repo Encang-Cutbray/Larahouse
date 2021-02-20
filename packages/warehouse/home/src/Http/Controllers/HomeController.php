@@ -11,7 +11,7 @@ class HomeController extends Controller
 {
 	public function index()
 	{
-		return Inertia::render('Home/Home', [
+		return Inertia::render('Larahouse/Home/Home', [
 			'example' => URL::route('example'),
 			'home' => URL::route('home'),
 		]);

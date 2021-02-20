@@ -6,8 +6,6 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Http\FormRequest;
 use Warehouse\Baseclass\FailedValidationJson;
 
-
-
 class RegistrationRequest extends FormRequest
 {
 	use FailedValidationJson;

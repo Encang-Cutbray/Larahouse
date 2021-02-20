@@ -4,6 +4,7 @@ namespace Warehouse\Auth\Services;
 
 use Exception;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
@@ -20,8 +21,15 @@ class AuthService
 		$this->user = $user;
 	}
 
-	public function loginUser()
+	public function loginUser(array $datauser)
 	{
+		try {
+			$user = Auth::attempt($datauser);
+			return $user;
+		} catch (Exception $th) {
+			throw (new WarehouseException('Failed user login', [$th->getMessage()]))
+				->withStatus(JsonResponse::HTTP_INTERNAL_SERVER_ERROR);
+		}
 	}
 
 	public function registrationNewUser(array $userData): User
