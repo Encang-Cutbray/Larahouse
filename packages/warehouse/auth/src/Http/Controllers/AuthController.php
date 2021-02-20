@@ -15,7 +15,6 @@ class AuthController extends Controller
 
 	public function __construct(AuthService $authService)
 	{
-		$this->middleware('guest');
 		$this->authService = $authService;
 	}
 

@@ -25,12 +25,12 @@ class Controller extends BaseController
 		$method = request()->getMethod();
 		$reqBody = collect(request()->all())->implode(', ');
 		$urlParameters = collect(request()->route()->parameters)->implode(', ');
-		$message = "path: {$routeName} -- method: {$method} -- url parameters: [{$urlParameters}] -- request body: [{$reqBody}]";
-		// try {
-		// 	Log::info($message);
-		// } catch (Exception $e) {
-		// 	$message = "path: {$routeName} -- method: {$method} -- url parameters: [{$urlParameters}] -- request body: [{$reqBody}] -- error: {$e->getMessage()}";
-		// 	Log::error($message);
-		// }
+		try {
+			$message = "path: {$routeName} -- method: {$method} -- url parameters: [{$urlParameters}] -- request body: [{$reqBody}]";
+			Log::info($message);
+		} catch (Exception $e) {
+			$message = "path: {$routeName} -- method: {$method} -- url parameters: [{$urlParameters}] -- request body: [{$reqBody}] -- error: {$e->getMessage()}";
+			Log::error($message);
+		}
 	}
 }

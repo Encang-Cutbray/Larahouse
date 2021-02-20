@@ -13,6 +13,7 @@
 
         <!-- Styles Semantic -->
 		<link rel="stylesheet" href="{{url('css/semantic.min.css')}}">
+		<link rel="stylesheet" href="{{url('css/layout.css')}}">
 
         <!-- Scripts -->
         @routes

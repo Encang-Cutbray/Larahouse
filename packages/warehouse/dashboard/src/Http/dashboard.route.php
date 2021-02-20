@@ -2,5 +2,6 @@
 
 use Warehouse\Dashboard\Http\Controllers\DashboardController;
 
-Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
-
+Route::group(['middleware' => ['web', 'auth']], function () {
+	Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+});
