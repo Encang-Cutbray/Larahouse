@@ -1,9 +1,10 @@
 <?php
 
-namespace Warehouse\Home\Providers;
+namespace Warehouse\Dashboard\Providers;
+
 use Illuminate\Support\ServiceProvider;
 
-class HomeServiceProvider extends ServiceProvider
+class DashboardServiceProvider extends ServiceProvider
 {
 	public function boot()
 	{
@@ -17,6 +18,6 @@ class HomeServiceProvider extends ServiceProvider
 	protected function pathRoute()
 	{
 		$dir = __DIR__;
-		return "{$dir}/../Http/home.route.php";
+		return "{$dir}/../Http/dashboard.route.php";
 	}
 }

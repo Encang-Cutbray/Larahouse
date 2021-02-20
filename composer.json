@@ -51,6 +51,7 @@
 			"Warehouse\\Baseclass\\": "packages/warehouse/.base/src/",
 			"Warehouse\\Example\\": "packages/warehouse/.example/src/",
 			"Warehouse\\Auth\\": "packages/warehouse/auth/src/",
+			"Warehouse\\Dashboard\\": "packages/warehouse/dashboard/src/",
 			"Warehouse\\Home\\": "packages/warehouse/home/src/"
 		}
 	},

@@ -6207,6 +6207,7 @@ new vue__WEBPACK_IMPORTED_MODULE_2__.default({
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var laravel_echo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! laravel-echo */ "./node_modules/laravel-echo/dist/echo.js");
+/* provided dependency */ var process = __webpack_require__(/*! process/browser */ "./node_modules/process/browser.js");
 window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
@@ -6243,9 +6244,9 @@ window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__.default({
   key: "websockets",
   // cluster: process.env.MIX_PUSHER_APP_CLUSTER,
   // forceTLS: true
-  namespace: "Warehouse.Example.Events",
-  wsHost: "websockets.ps",
-  wsPort: 6060,
+  namespace: process.env.MIX_NAMESPACE,
+  wsHost: process.env.MIX_WS_HOST,
+  wsPort: process.env.MIX_WS_PORT,
   forceTLS: false,
   disableStats: true
 });

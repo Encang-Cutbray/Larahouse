@@ -1,0 +1,26 @@
+{
+	"name": "encang-rohidun/dashboard",
+	"description": "Dashboard Module Warehouse",
+	"type": "project",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "encang cutbray",
+			"email": "cabe2cabean214@gmail.com"
+		}
+	],
+	"minimum-stability": "dev",
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"Warehouse\\Dashboard\\": "src/"
+		}
+	},
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Warehouse\\Dashboard\\Providers\\DashboardServiceProvider"
+			]
+		}
+	}
+}
